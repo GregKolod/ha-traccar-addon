@@ -21,7 +21,6 @@ RUN \
         mariadb-client \
         nginx \
         nss \
-        openjdk17-jre-headless \
         xmlstarlet \
         unzip \
     \
