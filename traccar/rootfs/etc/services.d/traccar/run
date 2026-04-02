@@ -23,4 +23,4 @@ options+=(/config/traccar.xml)
 # Run the Traccar daemon
 cd /opt/traccar || bashio::exit.nok "Failed to switch to Traccar directory"
 
-exec ./jre/bin/java "${options[@]}" 2>&1
+exec java "${options[@]}" 2>&1
