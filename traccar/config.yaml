@@ -1,6 +1,6 @@
 ---
 name: Traccar
-version: "6.9.1.1"
+version: "6.9.1.2"
 slug: traccar
 description: Modern GPS Tracking Platform GregKolod
 url: https://github.com/GregKolod/addon-traccar
