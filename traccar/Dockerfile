@@ -21,6 +21,7 @@ RUN \
         mariadb-client \
         nginx \
         nss \
+        openjdk21-jre-headless \
         xmlstarlet \
         unzip \
     \
