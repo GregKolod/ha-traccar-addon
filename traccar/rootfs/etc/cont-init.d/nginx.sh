@@ -7,6 +7,7 @@
 # Generate direct access configuration, if enabled.
 if bashio::var.has_value "$(bashio::addon.port 80)"; then
     bashio::config.require.ssl
+    mkdir -p /etc/nginx/servers
     bashio::var.json \
         certfile "$(bashio::config 'certfile')" \
         keyfile "$(bashio::config 'keyfile')" \
