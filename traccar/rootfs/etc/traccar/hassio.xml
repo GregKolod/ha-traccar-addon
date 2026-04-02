@@ -15,9 +15,10 @@
     <entry key='geocoder.type'>google</entry>
 
     <entry key='logger.enable'>true</entry>
-    <entry key='logger.level'>info</entry>
+    <entry key='logger.level'>debug</entry>
     <entry key='logger.file'>/dev/stdout</entry>
-
+    <entry key='logger.rotate'>false</entry>
+    
     <entry key='filter.enable'>true</entry>
     <entry key='filter.future'>86400</entry>
 
