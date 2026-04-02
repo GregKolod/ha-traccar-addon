@@ -5,11 +5,14 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-# Copy root filesystem
-COPY rootfs /
-
-# Fix permissions on all scripts
-RUN find /etc/cont-init.d /etc/services.d -type f | xargs chmod a+x
+# Build arguments — PRZENIESIONE TUTAJ (było na dole)
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_DESCRIPTION
+ARG BUILD_NAME
+ARG BUILD_REF
+ARG BUILD_REPOSITORY
+ARG BUILD_VERSION
 
 # Set working dir
 WORKDIR /opt/traccar
@@ -33,14 +36,11 @@ RUN \
     \
     && rm -fr /tmp/*
 
-# Build arguments
-ARG BUILD_ARCH
-ARG BUILD_DATE
-ARG BUILD_DESCRIPTION
-ARG BUILD_NAME
-ARG BUILD_REF
-ARG BUILD_REPOSITORY
-ARG BUILD_VERSION
+# Copy root filesystem — PRZENIESIONE TUTAJ (było na górze)
+COPY rootfs /
+
+# Fix permissions on all scripts
+RUN find /etc/cont-init.d /etc/services.d -type f | xargs chmod a+x
 
 # Labels
 LABEL \
