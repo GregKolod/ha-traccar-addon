@@ -8,6 +8,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Copy root filesystem
 COPY rootfs /
 
+# Fix permissions on all scripts
+RUN find /etc/cont-init.d /etc/services.d -type f | xargs chmod a+x
+
 # Set working dir
 WORKDIR /opt/traccar
 
